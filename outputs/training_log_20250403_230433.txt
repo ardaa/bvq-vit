@@ -1,0 +1,19 @@
+Training started at 2025-04-03 23:04:33
+Configuration:
+  data_path: ./data
+  output_dir: ./outputs
+  epochs: 90
+  batch_size: 128
+  lr: 0.0003
+  img_size: 224
+  patch_size: 16
+  embed_dim: 768
+  depth: 12
+  num_heads: 12
+  num_classes: 1000
+  device: cuda
+  post_quantize: False
+  quant_bits: 8
+  backup_interval: 10
+  resume_from: None
+CUDA is not available. Falling back to CPU.

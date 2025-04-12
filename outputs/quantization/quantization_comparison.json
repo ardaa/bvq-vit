@@ -1,0 +1,25 @@
+{
+    "original": {
+        "accuracy": 0.1502,
+        "loss": 263.21836989746095,
+        "inference_time": {
+            "avg_inference_time": 1.4924401473999023,
+            "std_inference_time": 0.07714573426547286,
+            "throughput": 0.6700436206719438
+        }
+    },
+    "quantized": {
+        "accuracy": 0.1502,
+        "loss": 263.21836989746095,
+        "inference_time": {
+            "avg_inference_time": 1.5136902928352356,
+            "std_inference_time": 0.1146283823764472,
+            "throughput": 0.6606371228865702
+        }
+    },
+    "differences": {
+        "accuracy_diff": 0.0,
+        "loss_diff": 0.0,
+        "speedup": 0.9859613650586803
+    }
+}

@@ -1,0 +1,5 @@
+Bit Depth,Original Accuracy,Quantized Accuracy,Accuracy Drop,Original Size (MB),Quantized Size (MB),Size Reduction %,Original Inference (s),Quantized Inference (s),Speedup,Original Throughput,Quantized Throughput
+4,0.7288,0.1767,0.5521,330.23,41.28,87.50,0.075663,0.088480,0.86,13.22,11.30
+8,0.7288,0.7276,0.0012,330.23,82.56,75.00,0.075670,0.088485,0.86,13.22,11.30
+12,0.7288,0.7288,0.0000,330.23,123.84,62.50,0.075692,0.088481,0.86,13.21,11.30
+16,0.7288,0.7290,-0.0002,330.23,165.11,50.00,0.075695,0.088531,0.86,13.21,11.30

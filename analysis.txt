@@ -1,0 +1,344 @@
+Loading model from /content/model.pth...
+Using model configuration: {'img_size': 224, 'patch_size': 16, 'in_chans': 3, 'num_classes': 1000, 'embed_dim': 768, 'depth': 12, 'num_heads': 12, 'mlp_ratio': 4.0, 'dropout': 0.0, 'attn_dropout': 0.0}
+Original model size: 330.23 MB (FP32)
+No data path provided, using CIFAR-10 as fallback
+Model configuration: 10 classes (overridden), image size 224
+Using dataset: CIFAR-10
+
+==================================================
+Starting analysis for 4-bit quantization
+==================================================
+Loading model from /content/model.pth...
+Using model configuration: {'img_size': 224, 'patch_size': 16, 'in_chans': 3, 'num_classes': 1000, 'embed_dim': 768, 'depth': 12, 'num_heads': 12, 'mlp_ratio': 4.0, 'dropout': 0.0, 'attn_dropout': 0.0}
+Quantizing model to 4 bits...
+Quantizing model to 4 bits...
+Quantized model created with 76 quantized layers
+Quantized model size: 41.28 MB (4-bit)
+Size reduction: 87.50%
+
+Verifying quantization...
+Layer patch_embed.proj: 16 unique values (max expected: 16)
+Layer blocks.0.attn.out_proj: 16 unique values (max expected: 16)
+Layer blocks.0.mlp.fc1: 16 unique values (max expected: 16)
+Layer blocks.0.mlp.fc2: 16 unique values (max expected: 16)
+Layer blocks.1.attn.out_proj: 16 unique values (max expected: 16)
+Layer blocks.1.mlp.fc1: 16 unique values (max expected: 16)
+Layer blocks.1.mlp.fc2: 16 unique values (max expected: 16)
+Layer blocks.2.attn.out_proj: 16 unique values (max expected: 16)
+Layer blocks.2.mlp.fc1: 16 unique values (max expected: 16)
+Layer blocks.2.mlp.fc2: 16 unique values (max expected: 16)
+Layer blocks.3.attn.out_proj: 16 unique values (max expected: 16)
+Layer blocks.3.mlp.fc1: 16 unique values (max expected: 16)
+Layer blocks.3.mlp.fc2: 16 unique values (max expected: 16)
+Layer blocks.4.attn.out_proj: 7 unique values (max expected: 16)
+Layer blocks.4.mlp.fc1: 16 unique values (max expected: 16)
+Layer blocks.4.mlp.fc2: 9 unique values (max expected: 16)
+Layer blocks.5.attn.out_proj: 16 unique values (max expected: 16)
+Layer blocks.5.mlp.fc1: 16 unique values (max expected: 16)
+Layer blocks.5.mlp.fc2: 16 unique values (max expected: 16)
+Layer blocks.6.attn.out_proj: 16 unique values (max expected: 16)
+Layer blocks.6.mlp.fc1: 16 unique values (max expected: 16)
+Layer blocks.6.mlp.fc2: 16 unique values (max expected: 16)
+Layer blocks.7.attn.out_proj: 16 unique values (max expected: 16)
+Layer blocks.7.mlp.fc1: 16 unique values (max expected: 16)
+Layer blocks.7.mlp.fc2: 16 unique values (max expected: 16)
+Layer blocks.8.attn.out_proj: 16 unique values (max expected: 16)
+Layer blocks.8.mlp.fc1: 7 unique values (max expected: 16)
+Layer blocks.8.mlp.fc2: 16 unique values (max expected: 16)
+Layer blocks.9.attn.out_proj: 16 unique values (max expected: 16)
+Layer blocks.9.mlp.fc1: 16 unique values (max expected: 16)
+Layer blocks.9.mlp.fc2: 16 unique values (max expected: 16)
+Layer blocks.10.attn.out_proj: 16 unique values (max expected: 16)
+Layer blocks.10.mlp.fc1: 16 unique values (max expected: 16)
+Layer blocks.10.mlp.fc2: 16 unique values (max expected: 16)
+Layer blocks.11.attn.out_proj: 16 unique values (max expected: 16)
+Layer blocks.11.mlp.fc1: 16 unique values (max expected: 16)
+Layer blocks.11.mlp.fc2: 16 unique values (max expected: 16)
+Layer head: 16 unique values (max expected: 16)
+
+Quantization verification passed for 4-bit model.
+Collecting activations from original model...
+Collecting activations from quantized model...
+Plotting activation histograms...
+Evaluating original model...
+Evaluating: 100% 313/313 [00:24<00:00, 12.65it/s]
+Computing Top-5 Accuracy: 100% 313/313 [00:25<00:00, 12.44it/s]
+Top-5 Accuracy: 0.9730
+Evaluating quantized model...
+Evaluating: 100% 313/313 [00:28<00:00, 10.93it/s]
+Computing Top-5 Accuracy: 100% 313/313 [00:29<00:00, 10.79it/s]
+Top-5 Accuracy: 0.6281
+Measuring inference time for original model...
+Measuring inference time:  32% 100/313 [00:08<00:18, 11.31it/s]
+Measuring inference time for quantized model...
+Measuring inference time:  32% 100/313 [00:10<00:21,  9.77it/s]
+
+Quantization Results:
+Original Accuracy: 0.7288
+Quantized Accuracy: 0.1767
+Accuracy Difference: -0.5521
+Original Inference Time: 0.075641 s
+Quantized Inference Time: 0.088442 s
+Speedup: 0.86x
+
+Model Size Comparison:
+Original Model (FP32): 330.23 MB
+Quantized Model (4-bit): 41.28 MB
+Size Reduction: 87.50%
+
+Results saved to ./outputs/quantization/4bit
+
+==================================================
+Starting analysis for 8-bit quantization
+==================================================
+Loading model from /content/model.pth...
+Using model configuration: {'img_size': 224, 'patch_size': 16, 'in_chans': 3, 'num_classes': 1000, 'embed_dim': 768, 'depth': 12, 'num_heads': 12, 'mlp_ratio': 4.0, 'dropout': 0.0, 'attn_dropout': 0.0}
+Quantizing model to 8 bits...
+Quantizing model to 8 bits...
+Quantized model created with 76 quantized layers
+Quantized model size: 82.56 MB (8-bit)
+Size reduction: 75.00%
+
+Verifying quantization...
+Layer patch_embed.proj: 236 unique values (max expected: 256)
+Layer blocks.0.attn.out_proj: 202 unique values (max expected: 256)
+Layer blocks.0.mlp.fc1: 235 unique values (max expected: 256)
+Layer blocks.0.mlp.fc2: 235 unique values (max expected: 256)
+Layer blocks.1.attn.out_proj: 230 unique values (max expected: 256)
+Layer blocks.1.mlp.fc1: 192 unique values (max expected: 256)
+Layer blocks.1.mlp.fc2: 167 unique values (max expected: 256)
+Layer blocks.2.attn.out_proj: 220 unique values (max expected: 256)
+Layer blocks.2.mlp.fc1: 226 unique values (max expected: 256)
+Layer blocks.2.mlp.fc2: 213 unique values (max expected: 256)
+Layer blocks.3.attn.out_proj: 238 unique values (max expected: 256)
+Layer blocks.3.mlp.fc1: 232 unique values (max expected: 256)
+Layer blocks.3.mlp.fc2: 222 unique values (max expected: 256)
+Layer blocks.4.attn.out_proj: 85 unique values (max expected: 256)
+Layer blocks.4.mlp.fc1: 226 unique values (max expected: 256)
+Layer blocks.4.mlp.fc2: 118 unique values (max expected: 256)
+Layer blocks.5.attn.out_proj: 234 unique values (max expected: 256)
+Layer blocks.5.mlp.fc1: 229 unique values (max expected: 256)
+Layer blocks.5.mlp.fc2: 222 unique values (max expected: 256)
+Layer blocks.6.attn.out_proj: 212 unique values (max expected: 256)
+Layer blocks.6.mlp.fc1: 246 unique values (max expected: 256)
+Layer blocks.6.mlp.fc2: 221 unique values (max expected: 256)
+Layer blocks.7.attn.out_proj: 225 unique values (max expected: 256)
+Layer blocks.7.mlp.fc1: 229 unique values (max expected: 256)
+Layer blocks.7.mlp.fc2: 231 unique values (max expected: 256)
+Layer blocks.8.attn.out_proj: 213 unique values (max expected: 256)
+Layer blocks.8.mlp.fc1: 74 unique values (max expected: 256)
+Layer blocks.8.mlp.fc2: 219 unique values (max expected: 256)
+Layer blocks.9.attn.out_proj: 211 unique values (max expected: 256)
+Layer blocks.9.mlp.fc1: 243 unique values (max expected: 256)
+Layer blocks.9.mlp.fc2: 206 unique values (max expected: 256)
+Layer blocks.10.attn.out_proj: 205 unique values (max expected: 256)
+Layer blocks.10.mlp.fc1: 235 unique values (max expected: 256)
+Layer blocks.10.mlp.fc2: 201 unique values (max expected: 256)
+Layer blocks.11.attn.out_proj: 231 unique values (max expected: 256)
+Layer blocks.11.mlp.fc1: 218 unique values (max expected: 256)
+Layer blocks.11.mlp.fc2: 192 unique values (max expected: 256)
+Layer head: 253 unique values (max expected: 256)
+
+Quantization verification passed for 8-bit model.
+Collecting activations from original model...
+Collecting activations from quantized model...
+Plotting activation histograms...
+Evaluating original model...
+Evaluating: 100% 313/313 [00:24<00:00, 12.66it/s]
+Computing Top-5 Accuracy: 100% 313/313 [00:25<00:00, 12.50it/s]
+Top-5 Accuracy: 0.9730
+Evaluating quantized model...
+Evaluating: 100% 313/313 [00:28<00:00, 10.91it/s]
+Computing Top-5 Accuracy: 100% 313/313 [00:29<00:00, 10.78it/s]
+Top-5 Accuracy: 0.9726
+Measuring inference time for original model...
+Measuring inference time:  32% 100/313 [00:08<00:18, 11.27it/s]
+Measuring inference time for quantized model...
+Measuring inference time:  32% 100/313 [00:10<00:21,  9.73it/s]
+
+Quantization Results:
+Original Accuracy: 0.7288
+Quantized Accuracy: 0.7276
+Accuracy Difference: -0.0012
+Original Inference Time: 0.075658 s
+Quantized Inference Time: 0.088450 s
+Speedup: 0.86x
+
+Model Size Comparison:
+Original Model (FP32): 330.23 MB
+Quantized Model (8-bit): 82.56 MB
+Size Reduction: 75.00%
+
+Results saved to ./outputs/quantization/8bit
+
+==================================================
+Starting analysis for 12-bit quantization
+==================================================
+Loading model from /content/model.pth...
+Using model configuration: {'img_size': 224, 'patch_size': 16, 'in_chans': 3, 'num_classes': 1000, 'embed_dim': 768, 'depth': 12, 'num_heads': 12, 'mlp_ratio': 4.0, 'dropout': 0.0, 'attn_dropout': 0.0}
+Quantizing model to 12 bits...
+Quantizing model to 12 bits...
+Quantized model created with 76 quantized layers
+Quantized model size: 123.84 MB (12-bit)
+Size reduction: 62.50%
+
+Verifying quantization...
+Layer patch_embed.proj: 3037 unique values (max expected: 4096)
+Layer blocks.0.attn.out_proj: 2224 unique values (max expected: 4096)
+Layer blocks.0.mlp.fc1: 2884 unique values (max expected: 4096)
+Layer blocks.0.mlp.fc2: 2897 unique values (max expected: 4096)
+Layer blocks.1.attn.out_proj: 2139 unique values (max expected: 4096)
+Layer blocks.1.mlp.fc1: 2457 unique values (max expected: 4096)
+Layer blocks.1.mlp.fc2: 1809 unique values (max expected: 4096)
+Layer blocks.2.attn.out_proj: 2140 unique values (max expected: 4096)
+Layer blocks.2.mlp.fc1: 3124 unique values (max expected: 4096)
+Layer blocks.2.mlp.fc2: 2036 unique values (max expected: 4096)
+Layer blocks.3.attn.out_proj: 2370 unique values (max expected: 4096)
+Layer blocks.3.mlp.fc1: 3122 unique values (max expected: 4096)
+Layer blocks.3.mlp.fc2: 2243 unique values (max expected: 4096)
+Layer blocks.4.attn.out_proj: 964 unique values (max expected: 4096)
+Layer blocks.4.mlp.fc1: 3121 unique values (max expected: 4096)
+Layer blocks.4.mlp.fc2: 1246 unique values (max expected: 4096)
+Layer blocks.5.attn.out_proj: 2686 unique values (max expected: 4096)
+Layer blocks.5.mlp.fc1: 3155 unique values (max expected: 4096)
+Layer blocks.5.mlp.fc2: 2422 unique values (max expected: 4096)
+Layer blocks.6.attn.out_proj: 2308 unique values (max expected: 4096)
+Layer blocks.6.mlp.fc1: 3406 unique values (max expected: 4096)
+Layer blocks.6.mlp.fc2: 2482 unique values (max expected: 4096)
+Layer blocks.7.attn.out_proj: 2543 unique values (max expected: 4096)
+Layer blocks.7.mlp.fc1: 3190 unique values (max expected: 4096)
+Layer blocks.7.mlp.fc2: 2514 unique values (max expected: 4096)
+Layer blocks.8.attn.out_proj: 2614 unique values (max expected: 4096)
+Layer blocks.8.mlp.fc1: 1003 unique values (max expected: 4096)
+Layer blocks.8.mlp.fc2: 2029 unique values (max expected: 4096)
+Layer blocks.9.attn.out_proj: 2439 unique values (max expected: 4096)
+Layer blocks.9.mlp.fc1: 3247 unique values (max expected: 4096)
+Layer blocks.9.mlp.fc2: 1828 unique values (max expected: 4096)
+Layer blocks.10.attn.out_proj: 2064 unique values (max expected: 4096)
+Layer blocks.10.mlp.fc1: 3097 unique values (max expected: 4096)
+Layer blocks.10.mlp.fc2: 1702 unique values (max expected: 4096)
+Layer blocks.11.attn.out_proj: 2110 unique values (max expected: 4096)
+Layer blocks.11.mlp.fc1: 2834 unique values (max expected: 4096)
+Layer blocks.11.mlp.fc2: 1913 unique values (max expected: 4096)
+Layer head: 3383 unique values (max expected: 4096)
+
+Quantization verification passed for 12-bit model.
+Collecting activations from original model...
+Collecting activations from quantized model...
+Plotting activation histograms...
+Evaluating original model...
+Evaluating: 100% 313/313 [00:24<00:00, 12.66it/s]
+Computing Top-5 Accuracy: 100% 313/313 [00:25<00:00, 12.50it/s]
+Top-5 Accuracy: 0.9730
+Evaluating quantized model...
+Evaluating: 100% 313/313 [00:28<00:00, 10.91it/s]
+Computing Top-5 Accuracy: 100% 313/313 [00:29<00:00, 10.77it/s]
+Top-5 Accuracy: 0.9730
+Measuring inference time for original model...
+Measuring inference time:  32% 100/313 [00:08<00:18, 11.27it/s]
+Measuring inference time for quantized model...
+Measuring inference time:  32% 100/313 [00:10<00:21,  9.72it/s]
+
+Quantization Results:
+Original Accuracy: 0.7288
+Quantized Accuracy: 0.7288
+Accuracy Difference: 0.0000
+Original Inference Time: 0.075630 s
+Quantized Inference Time: 0.088422 s
+Speedup: 0.86x
+
+Model Size Comparison:
+Original Model (FP32): 330.23 MB
+Quantized Model (12-bit): 123.84 MB
+Size Reduction: 62.50%
+
+Results saved to ./outputs/quantization/12bit
+
+==================================================
+Starting analysis for 16-bit quantization
+==================================================
+Loading model from /content/model.pth...
+Using model configuration: {'img_size': 224, 'patch_size': 16, 'in_chans': 3, 'num_classes': 1000, 'embed_dim': 768, 'depth': 12, 'num_heads': 12, 'mlp_ratio': 4.0, 'dropout': 0.0, 'attn_dropout': 0.0}
+Quantizing model to 16 bits...
+Quantizing model to 16 bits...
+Quantized model created with 76 quantized layers
+Quantized model size: 165.11 MB (16-bit)
+Size reduction: 50.00%
+
+Verifying quantization...
+Layer patch_embed.proj: 32239 unique values (max expected: 65536)
+Layer blocks.0.attn.out_proj: 22459 unique values (max expected: 65536)
+Layer blocks.0.mlp.fc1: 31798 unique values (max expected: 65536)
+Layer blocks.0.mlp.fc2: 26195 unique values (max expected: 65536)
+Layer blocks.1.attn.out_proj: 19100 unique values (max expected: 65536)
+Layer blocks.1.mlp.fc1: 30994 unique values (max expected: 65536)
+Layer blocks.1.mlp.fc2: 20343 unique values (max expected: 65536)
+Layer blocks.2.attn.out_proj: 19714 unique values (max expected: 65536)
+Layer blocks.2.mlp.fc1: 40214 unique values (max expected: 65536)
+Layer blocks.2.mlp.fc2: 22156 unique values (max expected: 65536)
+Layer blocks.3.attn.out_proj: 22855 unique values (max expected: 65536)
+Layer blocks.3.mlp.fc1: 39922 unique values (max expected: 65536)
+Layer blocks.3.mlp.fc2: 25181 unique values (max expected: 65536)
+Layer blocks.4.attn.out_proj: 10339 unique values (max expected: 65536)
+Layer blocks.4.mlp.fc1: 40518 unique values (max expected: 65536)
+Layer blocks.4.mlp.fc2: 13637 unique values (max expected: 65536)
+Layer blocks.5.attn.out_proj: 28944 unique values (max expected: 65536)
+Layer blocks.5.mlp.fc1: 40652 unique values (max expected: 65536)
+Layer blocks.5.mlp.fc2: 26475 unique values (max expected: 65536)
+Layer blocks.6.attn.out_proj: 25425 unique values (max expected: 65536)
+Layer blocks.6.mlp.fc1: 43967 unique values (max expected: 65536)
+Layer blocks.6.mlp.fc2: 25763 unique values (max expected: 65536)
+Layer blocks.7.attn.out_proj: 28936 unique values (max expected: 65536)
+Layer blocks.7.mlp.fc1: 40803 unique values (max expected: 65536)
+Layer blocks.7.mlp.fc2: 26857 unique values (max expected: 65536)
+Layer blocks.8.attn.out_proj: 30450 unique values (max expected: 65536)
+Layer blocks.8.mlp.fc1: 13041 unique values (max expected: 65536)
+Layer blocks.8.mlp.fc2: 22503 unique values (max expected: 65536)
+Layer blocks.9.attn.out_proj: 28162 unique values (max expected: 65536)
+Layer blocks.9.mlp.fc1: 38960 unique values (max expected: 65536)
+Layer blocks.9.mlp.fc2: 19756 unique values (max expected: 65536)
+Layer blocks.10.attn.out_proj: 22092 unique values (max expected: 65536)
+Layer blocks.10.mlp.fc1: 36375 unique values (max expected: 65536)
+Layer blocks.10.mlp.fc2: 17923 unique values (max expected: 65536)
+Layer blocks.11.attn.out_proj: 16364 unique values (max expected: 65536)
+Layer blocks.11.mlp.fc1: 32845 unique values (max expected: 65536)
+Layer blocks.11.mlp.fc2: 20294 unique values (max expected: 65536)
+Layer head: 23537 unique values (max expected: 65536)
+
+Quantization verification passed for 16-bit model.
+Collecting activations from original model...
+Collecting activations from quantized model...
+Plotting activation histograms...
+Evaluating original model...
+Evaluating: 100% 313/313 [00:24<00:00, 12.65it/s]
+Computing Top-5 Accuracy: 100% 313/313 [00:25<00:00, 12.47it/s]
+Top-5 Accuracy: 0.9730
+Evaluating quantized model...
+Evaluating: 100% 313/313 [00:28<00:00, 10.90it/s]
+Computing Top-5 Accuracy: 100% 313/313 [00:29<00:00, 10.77it/s]
+Top-5 Accuracy: 0.9730
+Measuring inference time for original model...
+Measuring inference time:  32% 100/313 [00:08<00:18, 11.25it/s]
+Measuring inference time for quantized model...
+Measuring inference time:  32% 100/313 [00:10<00:21,  9.70it/s]
+
+Quantization Results:
+Original Accuracy: 0.7288
+Quantized Accuracy: 0.7290
+Accuracy Difference: 0.0002
+Original Inference Time: 0.075664 s
+Quantized Inference Time: 0.088454 s
+Speedup: 0.86x
+
+Model Size Comparison:
+Original Model (FP32): 330.23 MB
+Quantized Model (16-bit): 165.11 MB
+Size Reduction: 50.00%
+
+Results saved to ./outputs/quantization/16bit
+
+Creating comparative analysis across bit depths...
+
+Comparative analysis saved to ./outputs/quantization/comparative_analysis
+
+Quantization analysis complete!

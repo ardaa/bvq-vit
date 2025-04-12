@@ -1,0 +1,515 @@
+Training started at 2025-04-04 11:37:56
+Configuration:
+  data_path: ./data
+  output_dir: ./drive/MyDrive/BT-ViT/outputs
+  epochs: 90
+  batch_size: 128
+  lr: 0.0003
+  img_size: 224
+  patch_size: 16
+  embed_dim: 768
+  depth: 12
+  num_heads: 12
+  num_classes: 100
+  device: cuda
+  post_quantize: False
+  quant_bits: 8
+  backup_interval: 10
+  resume_from: None
+Using GPU: NVIDIA A100-SXM4-40GB
+GPU Memory: 39.56 GB
+Training: 100% 391/391 [05:50<00:00,  1.12it/s, loss=3.7409, acc=6.92%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=3.6768, acc=10.39%]
+Epoch 1/90 - Time: 373.97s - Train Loss: 4.1176, Train Acc: 0.0692 - Val Loss: 3.8071, Val Acc: 0.1039
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_1.pth
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=3.6597, acc=11.86%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=3.3074, acc=14.66%]
+Epoch 2/90 - Time: 372.85s - Train Loss: 3.7448, Train Acc: 0.1186 - Val Loss: 3.6188, Val Acc: 0.1466
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_2.pth
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=3.4080, acc=15.13%]
+Validation: 100% 79/79 [00:23<00:00,  3.35it/s, loss=2.8419, acc=17.61%]
+Epoch 3/90 - Time: 372.83s - Train Loss: 3.5747, Train Acc: 0.1513 - Val Loss: 3.4254, Val Acc: 0.1761
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_3.pth
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=3.4907, acc=17.47%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=3.0151, acc=19.52%]
+Epoch 4/90 - Time: 372.86s - Train Loss: 3.4478, Train Acc: 0.1747 - Val Loss: 3.3232, Val Acc: 0.1952
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_4.pth
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=3.1871, acc=19.24%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=3.0356, acc=21.75%]
+Epoch 5/90 - Time: 372.94s - Train Loss: 3.3381, Train Acc: 0.1924 - Val Loss: 3.2009, Val Acc: 0.2175
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_5.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=3.1237, acc=20.80%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.8600, acc=23.63%]
+Epoch 6/90 - Time: 372.99s - Train Loss: 3.2609, Train Acc: 0.2080 - Val Loss: 3.1310, Val Acc: 0.2363
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_6.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=3.1070, acc=22.37%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.8635, acc=24.86%]
+Epoch 7/90 - Time: 373.01s - Train Loss: 3.1732, Train Acc: 0.2237 - Val Loss: 3.0718, Val Acc: 0.2486
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_7.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=2.9276, acc=23.87%]
+Validation: 100% 79/79 [00:23<00:00,  3.33it/s, loss=2.1605, acc=26.44%]
+Epoch 8/90 - Time: 373.08s - Train Loss: 3.0955, Train Acc: 0.2387 - Val Loss: 3.0122, Val Acc: 0.2644
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_8.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=3.2877, acc=25.43%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.4128, acc=26.47%]
+Epoch 9/90 - Time: 373.05s - Train Loss: 3.0184, Train Acc: 0.2543 - Val Loss: 2.9873, Val Acc: 0.2647
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_9.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=3.0796, acc=27.03%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.4569, acc=28.89%]
+Epoch 10/90 - Time: 373.00s - Train Loss: 2.9358, Train Acc: 0.2703 - Val Loss: 2.8602, Val Acc: 0.2889
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_10.pth
+Backup created at epoch 10: ./drive/MyDrive/BT-ViT/outputs/backups/backup_epoch_10_20250404_124426
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=2.8378, acc=28.83%]
+Validation: 100% 79/79 [00:23<00:00,  3.33it/s, loss=2.6072, acc=29.93%]
+Epoch 11/90 - Time: 373.07s - Train Loss: 2.8567, Train Acc: 0.2883 - Val Loss: 2.8302, Val Acc: 0.2993
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_11.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=2.9201, acc=29.99%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.3954, acc=31.80%]
+Epoch 12/90 - Time: 373.09s - Train Loss: 2.7896, Train Acc: 0.2999 - Val Loss: 2.7218, Val Acc: 0.3180
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_12.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=3.1822, acc=31.39%]
+Validation: 100% 79/79 [00:23<00:00,  3.33it/s, loss=2.3851, acc=32.13%]
+Epoch 13/90 - Time: 373.14s - Train Loss: 2.7109, Train Acc: 0.3139 - Val Loss: 2.7254, Val Acc: 0.3213
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_13.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=2.4799, acc=32.84%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.3013, acc=33.71%]
+Epoch 14/90 - Time: 373.05s - Train Loss: 2.6476, Train Acc: 0.3284 - Val Loss: 2.6319, Val Acc: 0.3371
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_14.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=2.6476, acc=34.27%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.1466, acc=34.89%]
+Epoch 15/90 - Time: 373.03s - Train Loss: 2.5714, Train Acc: 0.3427 - Val Loss: 2.6232, Val Acc: 0.3489
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_15.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=2.4430, acc=35.68%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.9543, acc=35.36%]
+Epoch 16/90 - Time: 373.05s - Train Loss: 2.4964, Train Acc: 0.3568 - Val Loss: 2.5792, Val Acc: 0.3536
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_16.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=2.3735, acc=37.31%]
+Validation: 100% 79/79 [00:23<00:00,  3.33it/s, loss=2.1093, acc=35.95%]
+Epoch 17/90 - Time: 373.08s - Train Loss: 2.4299, Train Acc: 0.3731 - Val Loss: 2.5672, Val Acc: 0.3595
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_17.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=2.4011, acc=38.98%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.7354, acc=36.31%]
+Epoch 18/90 - Time: 372.91s - Train Loss: 2.3515, Train Acc: 0.3898 - Val Loss: 2.5451, Val Acc: 0.3631
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_18.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.8920, acc=40.68%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.3642, acc=36.85%]
+Epoch 19/90 - Time: 372.89s - Train Loss: 2.2747, Train Acc: 0.4068 - Val Loss: 2.5320, Val Acc: 0.3685
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_19.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.9613, acc=42.83%]
+Validation: 100% 79/79 [00:23<00:00,  3.33it/s, loss=1.9064, acc=37.24%]
+Epoch 20/90 - Time: 372.91s - Train Loss: 2.1825, Train Acc: 0.4283 - Val Loss: 2.5168, Val Acc: 0.3724
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_20.pth
+Backup created at epoch 20: ./drive/MyDrive/BT-ViT/outputs/backups/backup_epoch_20_20250404_135122
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=2.2086, acc=44.53%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.9279, acc=37.37%]
+Epoch 21/90 - Time: 372.93s - Train Loss: 2.1090, Train Acc: 0.4453 - Val Loss: 2.5706, Val Acc: 0.3737
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_21.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=2.1735, acc=46.42%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.8101, acc=38.53%]
+Epoch 22/90 - Time: 372.88s - Train Loss: 2.0135, Train Acc: 0.4642 - Val Loss: 2.5704, Val Acc: 0.3853
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_22.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=2.1826, acc=48.61%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.6277, acc=38.74%]
+Epoch 23/90 - Time: 372.84s - Train Loss: 1.9294, Train Acc: 0.4861 - Val Loss: 2.5625, Val Acc: 0.3874
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_23.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=2.1824, acc=50.53%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.8112, acc=38.40%]
+Epoch 24/90 - Time: 372.96s - Train Loss: 1.8528, Train Acc: 0.5053 - Val Loss: 2.5877, Val Acc: 0.3840
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_24.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.6609, acc=52.34%]
+Validation: 100% 79/79 [00:23<00:00,  3.33it/s, loss=1.9520, acc=38.50%]
+Epoch 25/90 - Time: 372.88s - Train Loss: 1.7708, Train Acc: 0.5234 - Val Loss: 2.6351, Val Acc: 0.3850
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_25.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=2.0527, acc=54.75%]
+Validation: 100% 79/79 [00:23<00:00,  3.35it/s, loss=1.5732, acc=39.23%]
+Epoch 26/90 - Time: 372.85s - Train Loss: 1.6805, Train Acc: 0.5475 - Val Loss: 2.6420, Val Acc: 0.3923
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_26.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.8805, acc=56.95%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.4480, acc=39.31%]
+Epoch 27/90 - Time: 372.91s - Train Loss: 1.5927, Train Acc: 0.5695 - Val Loss: 2.7101, Val Acc: 0.3931
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_27.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.6118, acc=58.89%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.7817, acc=39.63%]
+Epoch 28/90 - Time: 372.76s - Train Loss: 1.5060, Train Acc: 0.5889 - Val Loss: 2.6800, Val Acc: 0.3963
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_28.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.4499, acc=61.02%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.5713, acc=39.53%]
+Epoch 29/90 - Time: 372.94s - Train Loss: 1.4306, Train Acc: 0.6102 - Val Loss: 2.7406, Val Acc: 0.3953
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_29.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.6966, acc=62.73%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.3281, acc=38.73%]
+Epoch 30/90 - Time: 372.79s - Train Loss: 1.3680, Train Acc: 0.6273 - Val Loss: 2.8623, Val Acc: 0.3873
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_30.pth
+Backup created at epoch 30: ./drive/MyDrive/BT-ViT/outputs/backups/backup_epoch_30_20250404_145818
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.2233, acc=64.74%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.6027, acc=39.79%]
+Epoch 31/90 - Time: 372.82s - Train Loss: 1.2954, Train Acc: 0.6474 - Val Loss: 2.8531, Val Acc: 0.3979
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_31.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.1771, acc=66.25%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.5445, acc=39.28%]
+Epoch 32/90 - Time: 372.84s - Train Loss: 1.2421, Train Acc: 0.6625 - Val Loss: 2.9344, Val Acc: 0.3928
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_32.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.1238, acc=67.32%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.4052, acc=38.99%]
+Epoch 33/90 - Time: 372.85s - Train Loss: 1.2009, Train Acc: 0.6732 - Val Loss: 3.0351, Val Acc: 0.3899
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_33.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.3711, acc=68.95%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.0622, acc=39.67%]
+Epoch 34/90 - Time: 372.77s - Train Loss: 1.1394, Train Acc: 0.6895 - Val Loss: 3.0321, Val Acc: 0.3967
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_34.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.8536, acc=70.10%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.6818, acc=39.92%]
+Epoch 35/90 - Time: 372.80s - Train Loss: 1.0935, Train Acc: 0.7010 - Val Loss: 3.0334, Val Acc: 0.3992
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_35.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.3528, acc=71.43%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.8523, acc=40.17%]
+Epoch 36/90 - Time: 372.91s - Train Loss: 1.0529, Train Acc: 0.7143 - Val Loss: 3.1341, Val Acc: 0.4017
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_36.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.0818, acc=72.34%]
+Validation: 100% 79/79 [00:23<00:00,  3.33it/s, loss=1.4650, acc=40.31%]
+Epoch 37/90 - Time: 373.02s - Train Loss: 1.0193, Train Acc: 0.7234 - Val Loss: 3.1135, Val Acc: 0.4031
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_37.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.7665, acc=73.56%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.2397, acc=39.39%]
+Epoch 38/90 - Time: 372.94s - Train Loss: 0.9769, Train Acc: 0.7356 - Val Loss: 3.1837, Val Acc: 0.3939
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_38.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.2833, acc=74.38%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.9730, acc=40.37%]
+Epoch 39/90 - Time: 372.88s - Train Loss: 0.9449, Train Acc: 0.7438 - Val Loss: 3.1611, Val Acc: 0.4037
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_39.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.8820, acc=74.83%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.1734, acc=40.60%]
+Epoch 40/90 - Time: 372.93s - Train Loss: 0.9316, Train Acc: 0.7483 - Val Loss: 3.2118, Val Acc: 0.4060
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_40.pth
+Backup created at epoch 40: ./drive/MyDrive/BT-ViT/outputs/backups/backup_epoch_40_20250404_160513
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.0304, acc=75.54%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.1928, acc=39.54%]
+Epoch 41/90 - Time: 372.84s - Train Loss: 0.9017, Train Acc: 0.7554 - Val Loss: 3.3871, Val Acc: 0.3954
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_41.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.7230, acc=76.39%]
+Validation: 100% 79/79 [00:23<00:00,  3.35it/s, loss=1.8100, acc=40.51%]
+Epoch 42/90 - Time: 372.73s - Train Loss: 0.8717, Train Acc: 0.7639 - Val Loss: 3.3372, Val Acc: 0.4051
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_42.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.9142, acc=77.00%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.3070, acc=39.82%]
+Epoch 43/90 - Time: 372.79s - Train Loss: 0.8526, Train Acc: 0.7700 - Val Loss: 3.3168, Val Acc: 0.3982
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_43.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.7642, acc=77.77%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.3141, acc=39.50%]
+Epoch 44/90 - Time: 372.70s - Train Loss: 0.8306, Train Acc: 0.7777 - Val Loss: 3.4326, Val Acc: 0.3950
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_44.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.8697, acc=77.78%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.5685, acc=40.07%]
+Epoch 45/90 - Time: 372.90s - Train Loss: 0.8247, Train Acc: 0.7778 - Val Loss: 3.4356, Val Acc: 0.4007
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_45.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.7723, acc=78.46%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.0644, acc=40.96%]
+Epoch 46/90 - Time: 372.82s - Train Loss: 0.8022, Train Acc: 0.7846 - Val Loss: 3.3020, Val Acc: 0.4096
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_46.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.8353, acc=78.90%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.0800, acc=40.08%]
+Epoch 47/90 - Time: 372.82s - Train Loss: 0.7777, Train Acc: 0.7890 - Val Loss: 3.4823, Val Acc: 0.4008
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_47.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.0226, acc=79.35%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.5416, acc=39.80%]
+Epoch 48/90 - Time: 372.81s - Train Loss: 0.7618, Train Acc: 0.7935 - Val Loss: 3.4430, Val Acc: 0.3980
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_48.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.5933, acc=79.42%]
+Validation: 100% 79/79 [00:23<00:00,  3.33it/s, loss=2.5288, acc=38.83%]
+Epoch 49/90 - Time: 372.85s - Train Loss: 0.7622, Train Acc: 0.7942 - Val Loss: 3.6629, Val Acc: 0.3883
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_49.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.7177, acc=80.43%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.0185, acc=40.40%]
+Epoch 50/90 - Time: 372.90s - Train Loss: 0.7250, Train Acc: 0.8043 - Val Loss: 3.3931, Val Acc: 0.4040
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_50.pth
+Backup created at epoch 50: ./drive/MyDrive/BT-ViT/outputs/backups/backup_epoch_50_20250404_171206
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.9413, acc=80.50%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.5495, acc=41.23%]
+Epoch 51/90 - Time: 372.99s - Train Loss: 0.7254, Train Acc: 0.8050 - Val Loss: 3.3527, Val Acc: 0.4123
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_51.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.6241, acc=80.70%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.4799, acc=39.49%]
+Epoch 52/90 - Time: 372.79s - Train Loss: 0.7117, Train Acc: 0.8070 - Val Loss: 3.6365, Val Acc: 0.3949
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_52.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.6751, acc=81.18%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.5156, acc=40.06%]
+Epoch 53/90 - Time: 372.92s - Train Loss: 0.6964, Train Acc: 0.8118 - Val Loss: 3.7505, Val Acc: 0.4006
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_53.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.5023, acc=81.28%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.5875, acc=40.98%]
+Epoch 54/90 - Time: 372.89s - Train Loss: 0.6988, Train Acc: 0.8128 - Val Loss: 3.5468, Val Acc: 0.4098
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_54.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.5474, acc=81.77%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.5259, acc=41.06%]
+Epoch 55/90 - Time: 372.75s - Train Loss: 0.6767, Train Acc: 0.8177 - Val Loss: 3.5330, Val Acc: 0.4106
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_55.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.7675, acc=81.85%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.0324, acc=41.09%]
+Epoch 56/90 - Time: 372.89s - Train Loss: 0.6689, Train Acc: 0.8185 - Val Loss: 3.6220, Val Acc: 0.4109
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_56.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.6618, acc=82.43%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.2867, acc=40.58%]
+Epoch 57/90 - Time: 372.76s - Train Loss: 0.6520, Train Acc: 0.8243 - Val Loss: 3.5621, Val Acc: 0.4058
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_57.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.6605, acc=82.60%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.5002, acc=40.26%]
+Epoch 58/90 - Time: 372.75s - Train Loss: 0.6483, Train Acc: 0.8260 - Val Loss: 3.7349, Val Acc: 0.4026
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_58.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.9074, acc=82.71%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.6515, acc=40.21%]
+Epoch 59/90 - Time: 372.87s - Train Loss: 0.6393, Train Acc: 0.8271 - Val Loss: 3.6837, Val Acc: 0.4021
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_59.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.8694, acc=83.05%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.5220, acc=39.78%]
+Epoch 60/90 - Time: 372.89s - Train Loss: 0.6276, Train Acc: 0.8305 - Val Loss: 3.8160, Val Acc: 0.3978
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_60.pth
+Backup created at epoch 60: ./drive/MyDrive/BT-ViT/outputs/backups/backup_epoch_60_20250404_181900
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.5372, acc=83.32%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.4522, acc=41.05%]
+Epoch 61/90 - Time: 372.77s - Train Loss: 0.6252, Train Acc: 0.8332 - Val Loss: 3.7583, Val Acc: 0.4105
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_61.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.7400, acc=83.53%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.0965, acc=39.84%]
+Epoch 62/90 - Time: 372.81s - Train Loss: 0.6134, Train Acc: 0.8353 - Val Loss: 3.8951, Val Acc: 0.3984
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_62.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.5714, acc=83.84%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.7241, acc=40.91%]
+Epoch 63/90 - Time: 372.78s - Train Loss: 0.6022, Train Acc: 0.8384 - Val Loss: 3.8015, Val Acc: 0.4091
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_63.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.6395, acc=83.94%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.1194, acc=40.76%]
+Epoch 64/90 - Time: 372.90s - Train Loss: 0.5944, Train Acc: 0.8394 - Val Loss: 3.9428, Val Acc: 0.4076
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_64.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.7904, acc=84.39%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.9489, acc=40.03%]
+Epoch 65/90 - Time: 372.90s - Train Loss: 0.5823, Train Acc: 0.8439 - Val Loss: 3.9649, Val Acc: 0.4003
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_65.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.7895, acc=84.28%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.6248, acc=40.81%]
+Epoch 66/90 - Time: 372.86s - Train Loss: 0.5818, Train Acc: 0.8428 - Val Loss: 3.8237, Val Acc: 0.4081
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_66.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.7542, acc=84.41%]
+Validation: 100% 79/79 [00:23<00:00,  3.33it/s, loss=2.5567, acc=40.73%]
+Epoch 67/90 - Time: 373.02s - Train Loss: 0.5764, Train Acc: 0.8441 - Val Loss: 3.8367, Val Acc: 0.4073
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_67.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.5894, acc=84.76%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=3.3956, acc=41.22%]
+Epoch 68/90 - Time: 372.84s - Train Loss: 0.5663, Train Acc: 0.8476 - Val Loss: 3.7409, Val Acc: 0.4122
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_68.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.6408, acc=84.92%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.3801, acc=41.02%]
+Epoch 69/90 - Time: 372.94s - Train Loss: 0.5673, Train Acc: 0.8492 - Val Loss: 3.8738, Val Acc: 0.4102
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_69.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.5788, acc=84.81%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.7667, acc=41.49%]
+Epoch 70/90 - Time: 372.95s - Train Loss: 0.5649, Train Acc: 0.8481 - Val Loss: 3.7614, Val Acc: 0.4149
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_70.pth
+Backup created at epoch 70: ./drive/MyDrive/BT-ViT/outputs/backups/backup_epoch_70_20250404_192600
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.3498, acc=85.31%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.4397, acc=42.31%]
+Epoch 71/90 - Time: 372.92s - Train Loss: 0.5484, Train Acc: 0.8531 - Val Loss: 3.7763, Val Acc: 0.4231
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_71.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.7666, acc=85.52%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.9947, acc=41.18%]
+Epoch 72/90 - Time: 372.88s - Train Loss: 0.5410, Train Acc: 0.8552 - Val Loss: 3.8936, Val Acc: 0.4118
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_72.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.3798, acc=85.78%]
+Validation: 100% 79/79 [00:23<00:00,  3.35it/s, loss=2.5794, acc=41.67%]
+Epoch 73/90 - Time: 372.97s - Train Loss: 0.5307, Train Acc: 0.8578 - Val Loss: 3.8486, Val Acc: 0.4167
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_73.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.5617, acc=85.74%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=3.4339, acc=41.04%]
+Epoch 74/90 - Time: 373.01s - Train Loss: 0.5395, Train Acc: 0.8574 - Val Loss: 3.8878, Val Acc: 0.4104
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_74.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.6386, acc=85.73%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=3.2887, acc=41.47%]
+Epoch 75/90 - Time: 372.88s - Train Loss: 0.5323, Train Acc: 0.8573 - Val Loss: 3.9017, Val Acc: 0.4147
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_75.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.5134, acc=85.90%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=3.1347, acc=41.50%]
+Epoch 76/90 - Time: 372.98s - Train Loss: 0.5262, Train Acc: 0.8590 - Val Loss: 3.8035, Val Acc: 0.4150
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_76.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.4611, acc=86.19%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.5248, acc=40.91%]
+Epoch 77/90 - Time: 372.84s - Train Loss: 0.5156, Train Acc: 0.8619 - Val Loss: 3.9376, Val Acc: 0.4091
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_77.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.7544, acc=86.43%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.7528, acc=41.15%]
+Epoch 78/90 - Time: 372.97s - Train Loss: 0.5090, Train Acc: 0.8643 - Val Loss: 3.8244, Val Acc: 0.4115
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_78.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.5286, acc=86.57%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.3049, acc=42.26%]
+Epoch 79/90 - Time: 372.75s - Train Loss: 0.5026, Train Acc: 0.8657 - Val Loss: 3.8166, Val Acc: 0.4226
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_79.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.7576, acc=86.62%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.3070, acc=41.27%]
+Epoch 80/90 - Time: 372.92s - Train Loss: 0.4984, Train Acc: 0.8662 - Val Loss: 3.9605, Val Acc: 0.4127
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_80.pth
+Backup created at epoch 80: ./drive/MyDrive/BT-ViT/outputs/backups/backup_epoch_80_20250404_203255
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.5535, acc=86.76%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=1.9434, acc=41.82%]
+Epoch 81/90 - Time: 372.79s - Train Loss: 0.4912, Train Acc: 0.8676 - Val Loss: 3.8941, Val Acc: 0.4182
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_81.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=1.0521, acc=86.93%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.6501, acc=42.49%]
+Epoch 82/90 - Time: 372.92s - Train Loss: 0.4910, Train Acc: 0.8693 - Val Loss: 3.8692, Val Acc: 0.4249
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_82.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.6534, acc=86.77%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.9137, acc=41.15%]
+Epoch 83/90 - Time: 372.93s - Train Loss: 0.4964, Train Acc: 0.8677 - Val Loss: 4.0159, Val Acc: 0.4115
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_83.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.5725, acc=87.05%]
+Validation: 100% 79/79 [00:23<00:00,  3.33it/s, loss=2.4754, acc=42.01%]
+Epoch 84/90 - Time: 373.02s - Train Loss: 0.4829, Train Acc: 0.8705 - Val Loss: 4.0067, Val Acc: 0.4201
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_84.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.4242, acc=87.26%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.4690, acc=41.76%]
+Epoch 85/90 - Time: 372.79s - Train Loss: 0.4768, Train Acc: 0.8726 - Val Loss: 3.9132, Val Acc: 0.4176
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_85.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.3589, acc=87.32%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=3.0698, acc=41.50%]
+Epoch 86/90 - Time: 372.86s - Train Loss: 0.4681, Train Acc: 0.8732 - Val Loss: 3.9963, Val Acc: 0.4150
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_86.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.5116, acc=87.57%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.6053, acc=41.48%]
+Epoch 87/90 - Time: 372.89s - Train Loss: 0.4604, Train Acc: 0.8757 - Val Loss: 4.1653, Val Acc: 0.4148
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_87.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.6310, acc=87.66%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=3.0817, acc=41.61%]
+Epoch 88/90 - Time: 372.87s - Train Loss: 0.4636, Train Acc: 0.8766 - Val Loss: 4.0869, Val Acc: 0.4161
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_88.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.3996, acc=87.68%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.2425, acc=41.70%]
+Epoch 89/90 - Time: 372.92s - Train Loss: 0.4596, Train Acc: 0.8768 - Val Loss: 4.1013, Val Acc: 0.4170
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_89.pth
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Training: 100% 391/391 [05:49<00:00,  1.12it/s, loss=0.4088, acc=87.70%]
+Validation: 100% 79/79 [00:23<00:00,  3.34it/s, loss=2.2330, acc=41.60%]
+Epoch 90/90 - Time: 372.90s - Train Loss: 0.4558, Train Acc: 0.8770 - Val Loss: 4.0377, Val Acc: 0.4160
+Checkpoint saved to ./drive/MyDrive/BT-ViT/outputs/checkpoint_epoch_90.pth
+Backup created at epoch 90: ./drive/MyDrive/BT-ViT/outputs/backups/backup_epoch_90_20250404_213953
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Total training time: 10.04 hours
+Training metrics plot saved as './drive/MyDrive/BT-ViT/outputs/training_metrics.png'
+Model saved to ./drive/MyDrive/BT-ViT/outputs/vit_model.pth
+
+Evaluating on test set...
+Metrics saved to ./drive/MyDrive/BT-ViT/outputs/metrics
+Test Loss: 4.0377
+Test Accuracy: 0.4160
+Test Top-5 Accuracy: 0.6710
+
+Training completed at 2025-04-04 21:40:48
+All outputs saved to ./drive/MyDrive/BT-ViT/outputs

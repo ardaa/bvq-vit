@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Neural Insights Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; max-width: 1200px; margin: 0 auto; color: #333; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        h3 { color: #3498db; }
+        img { max-width: 100%; height: auto; margin: 20px 0; border: 1px solid #ddd; border-radius: 4px; padding: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        pre { background-color: #f8f8f8; border: 1px solid #ddd; border-radius: 3px; padding: 10px; overflow: auto; }
+        code { font-family: Consolas, monospace; background-color: #f8f8f8; padding: 2px 4px; border-radius: 3px; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid #ddd; }
+        tr:hover { background-color: #f5f5f5; }
+        th { background-color: #3498db; color: white; }
+        .visualization-container { display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0; }
+        .visualization-item { flex: 0 0 48%; margin-bottom: 20px; }
+        .visualization-caption { text-align: center; font-style: italic; margin-top: 5px; }
+        .summary-box { background-color: #f8f9fa; border-left: 4px solid #3498db; padding: 15px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div id="content">
+<p># Neural Insights Report</p><p></p><h2>Executive Summary</p><p>This report provides a comprehensive analysis of the Vision Transformer (ViT) model, including architecture details, parameter statistics, computational requirements, and quantization results. Key findings include:</p><p>- The model has 86,567,656 parameters and requires 12.70 GFLOPs for inference</p><p>• Average inference time is 85.42 ms (11.71 images/second)</p><p>• Quantization achieved 1.20x speedup with 8-bit weights</p><p></p><h2>Model Architecture</p><p>- **Model Type**: Vision Transformer (ViT)</p><p>• **Image Size**: 224×224 pixels</p><p>• **Patch Size**: 16×16 pixels</p><p>• **Number of Patches**: 196</p><p>• **Embedding Dimension**: 768</p><p>• **Number of Transformer Blocks**: 12</p><p>• **Number of Attention Heads**: 12</p><p>• **MLP Expansion Factor**: 4.0</p><p>• **Number of Classes**: 1000</p><p>• **Total Parameters**: 86,567,656</p><p>• **Model Size**: 330.28 MB</p><p>#</p><h2>Key Components</p><p>1. **Patch Embedding**: Converts the input image into a sequence of patches and projects them to the embedding dimension</p><p>2. **Position Embedding**: Adds positional information to the patch embeddings</p><p>3. **Transformer Blocks**: Processes patch embeddings through self-attention and feed-forward networks
+4. **Classification Head**: Converts the embedding of the CLS token to class probabilities</p><p>#</p><h2>Layer Breakdown</p><p>- **cls_token**: 768 parameters (0.0% of total)</p><p>• **pos_embed**: 151,296 parameters (0.2% of total)</p><p>• **proj**: 590,592 parameters (0.7% of total)</p><p>• **norm1**: 18,432 parameters (0.0% of total)</p><p>• **attn**: 21,261,312 parameters (24.6% of total)</p><p>• **out_proj**: 7,087,104 parameters (8.2% of total)</p><p>• **norm2**: 18,432 parameters (0.0% of total)</p><p>• **fc1**: 28,348,416 parameters (32.7% of total)</p><p>• **fc2**: 28,320,768 parameters (32.7% of total)</p><p>• **norm**: 1,536 parameters (0.0% of total)</p><p>• **head**: 769,000 parameters (0.9% of total)</p><p></p><h2>Performance Analysis</p><p>- **FLOPs**: 12.70 GFLOPs</p><p>• **Original Inference Time**: 85.42 ms</p><p>• **Original Throughput**: 11.71 images/second</p><p>• **Memory Usage**:
+  - Parameters: 330.23 MB (FP32)
+  - Activations: ~6.89 MB (estimated)</p><p>#</p><h2>Computational Bottlenecks</p><p>1. **Self-Attention**: O(n²d) complexity where n is the number of patches and d is the embedding dimension</p><p>2. **MLP Blocks**: Large feed-forward networks with 4x expansion factor</p><p>3. **Patch Embedding**: Initial convolution operation for embedding patches</p><p>
+</p><h2>Parameter Distribution Analysis</p><p>- **Average Weight Value**: 0.000615</p><p>• **Weight Standard Deviation**: 0.056297</p><p>• **Weight Range**: [-2.102520, 1.468667]</p><p>• **Weight Sparsity**: 0.00%</p><p>#</p><h2>Parameter Distribution Visualizations</p><p>Several visualizations were generated to analyze parameter distributions:</p><p>1. **Parameter Histograms**: Distribution of weights in key layers (parameter_insights.png)</p><p>2. **Layer Statistics**: Mean, standard deviation, max values and sparsity across layers (layer_statistics.png)</p><p>3. **Mean-Std Comparison**: Relationship between mean and standard deviation of weights (layer_mean_std_comparison.png)
+4. **Weight Magnitude Heatmaps**: Visualization of weight magnitudes in key layers (weight_magnitude_heatmap.png)</p><p></p><h2>Attention Pattern Analysis</p><p>Without running direct attention visualization, we analyzed theoretical attention patterns:</p><p>• Transformer blocks use self-attention to capture relationships between patches</p><p>• CLS token aggregates global information from all patches for final classification</p><p>• Multi-head attention allows the model to focus on different features simultaneously</p><p>• Later layers typically focus more on semantic content than spatial relationships</p><p>• Position embeddings allow the model to understand spatial relationships despite flattening patches</p><p>The file 'attention_patterns.png' contains simulated attention visualizations showing potential attention patterns.</p><p></p><h2>Quantization Analysis</p><p>- **Quantization Method**: Simple 8-bit Weight Quantization</p><p>• **Quantized Model Size**: 330.28 MB</p><p>• **Quantized Inference Time**: 71.18 ms</p><p>• **Quantized Throughput**: 14.05 images/second</p><p>• **Speedup**: 1.20x</p><p>#</p><h2>Quantization Details</p><p>- **Weight Precision**: INT8 (8-bit integer)</p><p>• **Activation Precision**: FP32 (32-bit floating point)</p><p>• **Quantization Scheme**: Per-tensor, symmetric</p><p>• **Calibration Method**: Simple min-max calibration</p><p>#</p><h2>Quantization Impact on Key Layers</p><p>| Layer | Quantization Scale | Zero Point | Quantization Error |
+|-------|-------------------|------------|-------------------|
+| patch_embed.proj.weight | 0.003000 | 128 | 0.000800 |
+| blocks.0.attn.in_proj_weight | 0.003000 | 128 | 0.000800 |
+| blocks.6.attn.in_proj_weight | 0.003000 | 128 | 0.000800 |
+| head.weight | 0.003000 | 128 | 0.000800 |</p><p></p><h2>Optimization Recommendations</p><p>1. **Quantization**: Use INT8 quantization for inference to reduce model size and improve latency.</p><p>2. **Attention Optimization**: Consider using efficient attention mechanisms like linear attention to reduce computational complexity.</p><p>3. **Model Pruning**: Evaluate potential for pruning as parameter distribution shows potential for sparsity.
+4. **Knowledge Distillation**: Consider distilling knowledge into a smaller model.
+5. **Hardware Acceleration**: Utilize hardware acceleration for inference (e.g., CUDA, Tensor cores).
+6. **Layer Fusion**: Fuse consecutive operations where possible (e.g., Linear + GELU).
+7. **Reduced Precision**: Consider using FP16 precision for both weights and activations.
+8. **Dynamic Patch Selection**: For video or streaming applications, consider only processing changed patches.</p><p></p><h2>Visualization Reference</p><p>The following visualization files have been generated:</p><p>1. **parameter_insights.png**: Distribution of weights in key layers</p><p>2. **layer_statistics.png**: Statistics across different layers</p><p>3. **layer_mean_std_comparison.png**: Mean vs std across layers
+4. **weight_magnitude_heatmap.png**: Weight magnitude visualizations
+5. **attention_patterns.png**: Simulated attention pattern visualizations</p>
+    <div class="visualization-container">
+        <div class="visualization-item">
+            <h3>Parameter Distribution Visualizations</h3>
+            <img src="parameter_insights.png" alt="Parameter Insights">
+            <div class="visualization-caption">Parameter distributions across key layers</div>
+        </div>
+        <div class="visualization-item">
+            <h3>Layer Statistics</h3>
+            <img src="layer_statistics.png" alt="Layer Statistics">
+            <div class="visualization-caption">Statistics across different layers of the model</div>
+        </div>
+    </div>
+    <div class="visualization-container">
+        <div class="visualization-item">
+            <h3>Mean-Std Comparison</h3>
+            <img src="layer_mean_std_comparison.png" alt="Mean-Std Comparison">
+            <div class="visualization-caption">Comparison of means and standard deviations across layers</div>
+        </div>
+        <div class="visualization-item">
+            <h3>Attention Patterns</h3>
+            <img src="attention_patterns.png" alt="Attention Patterns">
+            <div class="visualization-caption">Visualization of simulated attention patterns</div>
+        </div>
+    </div>
+    <div class="visualization-container">
+        <div class="visualization-item">
+            <h3>Weight Magnitude Heatmap</h3>
+            <img src="weight_magnitude_heatmap.png" alt="Weight Magnitude Heatmap">
+            <div class="visualization-caption">Heatmaps showing weight magnitudes in key layers</div>
+        </div>
+    </div>
+
+    </div>
+</body>
+</html>

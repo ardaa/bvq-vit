@@ -1,0 +1,11 @@
+{
+    "original": {
+        "size_mb": 330.2294006347656,
+        "bits_per_param": 32
+    },
+    "quantized": {
+        "size_mb": 41.2786750793457,
+        "bits_per_param": 4
+    },
+    "reduction_percent": 87.5
+}
