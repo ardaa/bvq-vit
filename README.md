@@ -1,56 +1,137 @@
-# BV-ViT Model Conversion
+# BV-ViT: Vision Transformer with Post-Training Quantization
 
-This repository contains tools to work with Vision Transformer (ViT) model checkpoints.
+This repository implements a Vision Transformer (ViT) model with support for post-training quantization to reduce model size and improve inference speed while maintaining accuracy.
 
-## Scripts
+## Overview
 
-### `convert_checkpoint.py`
+BV-ViT provides tools for:
+- Training a Vision Transformer model on image classification tasks
+- Post-training quantization at various bit depths (4-16 bits)
+- Detailed analysis of quantization effects on model performance
+- Comprehensive visualization of quantization results
 
-This script converts training checkpoints (which contain optimizer state, epoch information, etc.) into standalone model files that can be easily used for inference.
+## Model Architecture
 
-#### Usage:
+The Vision Transformer (ViT) implementation follows the architecture described in the ["An Image is Worth 16x16 Words"](https://arxiv.org/abs/2010.11929) paper with customizable parameters:
 
-```
-python convert_checkpoint.py --checkpoint /path/to/checkpoint_epoch_xx.pth --output /path/to/save/model.pth
-```
+- Patchify images into fixed-size patches
+- Linear projection of flattened patches
+- Add positional embeddings
+- Prepend a learnable classification token
+- Process through Transformer encoder blocks
+- Classification via MLP head on the classification token
 
-Arguments:
-- `--checkpoint`: Path to the checkpoint file to convert
-- `--output`: Path where the converted model will be saved
+## Getting Started
 
-### `inference.py`
+### Prerequisites
 
-This script loads a converted model and runs inference on an image.
+- Python 3.7+
+- PyTorch 1.8+
+- CUDA-capable GPU (recommended)
 
-#### Usage:
+### Installation
 
-```
-python inference.py --model /path/to/model.pth --image /path/to/image.jpg [--img_size 224] [--device cuda] [--class_names /path/to/class_names.json]
-```
-
-Arguments:
-- `--model`: Path to the model file
-- `--image`: Path to an image for inference
-- `--img_size` (optional): Image size for inference (default: 224)
-- `--device` (optional): Device to use for inference ('cpu' or 'cuda', default: 'cpu')
-- `--class_names` (optional): JSON file with class names
-
-## Examples
-
-### Convert a checkpoint to a model:
-
-```
-python convert_checkpoint.py --checkpoint checkpoints/checkpoint_epoch_90.pth --output models/vit_model.pth
+```bash
+git clone https://github.com/username/BV-ViT.git
+cd BV-ViT
+pip install -r requirements.txt
 ```
 
-### Run inference with the converted model:
+## Usage
 
-```
-python inference.py --model models/vit_model.pth --image samples/cat.jpg --device cuda
+### Training a Model
+
+To train a Vision Transformer model:
+
+```bash
+python run.py --data-path /path/to/dataset \
+              --output-dir ./outputs \
+              --epochs 90 \
+              --batch-size 128 \
+              --img-size 224 \
+              --patch-size 16 \
+              --embed-dim 768 \
+              --depth 12 \
+              --num-heads 12 \
+              --num-classes 1000
 ```
 
-### Run inference with class names:
+Key parameters:
+- `--data-path`: Path to the dataset (supports ImageNet format)
+- `--img-size`: Input image size
+- `--patch-size`: Size of image patches
+- `--embed-dim`: Embedding dimension
+- `--depth`: Number of transformer blocks
+- `--num-heads`: Number of attention heads
 
+### Post-Training Quantization
+
+After training, you can quantize the model to reduce its size and improve inference speed:
+
+```bash
+python post_training.py --model-path ./outputs/vit_model.pth \
+                       --data-path /path/to/dataset \
+                       --output-dir ./outputs/quantization
 ```
-python inference.py --model models/vit_model.pth --image samples/cat.jpg --class_names imagenet_classes.json
-``` 
+
+The post-training script automatically:
+1. Quantizes the model to multiple bit depths (4, 6, 8, 10, 12, 16 bits)
+2. Evaluates performance metrics for each bit depth
+3. Generates visualizations comparing original vs. quantized models
+4. Creates detailed reports on size, speed, and accuracy tradeoffs
+
+## Key Components
+
+### run.py
+
+The main training script with the following features:
+- Command-line interface for model configuration
+- Training and validation loops
+- Model checkpointing and backup
+- Comprehensive metrics logging and visualization
+- Support for resuming training from checkpoints
+
+### post_training.py
+
+Handles post-training quantization with:
+- Support for multiple bit-width quantization (4-16 bits)
+- Weight and activation quantization
+- Comprehensive performance evaluation
+- Detailed visualizations and comparisons
+- Analysis of quantization effects on different layers
+
+### model.py
+
+Implements the Vision Transformer architecture:
+- PatchEmbed: Converts images to patch embeddings
+- MLP: Multi-layer perceptron for transformer blocks
+- TransformerEncoderBlock: Self-attention and feed-forward layers
+- VisionTransformer: Complete model implementation
+
+## Visualization Outputs
+
+The post-training quantization process generates:
+- Accuracy comparisons between original and quantized models
+- Inference time measurements
+- Model size reductions
+- Per-class accuracy changes
+- Activation distribution histograms
+- Confusion matrices
+- Comparative analysis across different bit depths
+
+## Performance Insights
+
+Quantizing the model typically results in:
+- 2-4x reduction in model size (8-bit quantization)
+- 1.2-1.5x speedup in inference time
+- Minimal accuracy degradation at 8+ bits
+- Noticeable accuracy drops at 4-6 bits
+
+## License
+
+[MIT License](LICENSE)
+
+## Acknowledgments
+
+- The Vision Transformer implementation is based on the paper "An Image is Worth 16x16 Words" by Dosovitskiy et al.
+- Quantization techniques draw inspiration from PyTorch's Quantization API and various research papers on efficient deep learning. 

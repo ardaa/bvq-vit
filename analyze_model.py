@@ -111,7 +111,7 @@ def analyze_parameters(model):
         stats = param_stats[name]
         plt.subplot(grid_size, grid_size, i+1)
         sns.histplot(param.flatten().cpu().numpy(), bins=50)
-        plt.title(f'{name}\nμ={stats["mean"]:.3f}, σ={stats["std"]:.3f}')
+        plt.title(f'{name}\nμ={stats["mean"]:.3f}, σ={stats["std"]:.3f}', fontsize=8)
         plt.tight_layout()
     
     plt.savefig('parameter_distributions.png')
